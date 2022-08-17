@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-color:#5C038C;
+    --tasks-bg:#5C038C;
+    --cont-bg:#1B1734;
+}
+:focus{
+    outline: beige;
+    padding: 10px;
+}
+::placeholder{
+    padding: 10px;
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 30px;
+    min-height: 100vh;
+    background-color: var(--cont-bg);
+}
+h1{
+    color: white;
+}
+.form{
+    width: 50%;
+    height: 80px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    background-color: var(--bg-color);
+}
+.add{
+    height: 50px;
+    width: 6rem;
+    background-color: #420264;
+    color: aliceblue;
+    transition: .4s;
+}
+.add:hover{
+    background-color: #896FBC;
+}
+input{
+    border: none;
+}
+.input{
+    width:80%;
+    height:50px;
+    font-size: large;
+}
+.tasks{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tasks-bg);
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    padding:30px;
+}
+.task{
+    width:100%;
+    height:50px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    overflow: hidden;
+    text-overflow: hidden;
+}
+button{
+    border: none;
+}
+.task button{
+    background-color: #896FBC;
+    color: aliceblue;
+    padding: 10px;
+    transition: 0.4s;
+    width: 70px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.task button:hover{
+    background-color: var(--bg-color);
+}
+.reset{
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+    font-size: large;
+    font-family: Verdana, Tahoma, sans-serif;
+    background-color: #420264;
+    color: aliceblue;
+    transition: .4s;
+}
+.reset:hover{
+    background-color: #896FBC;
+}
+
+
+.done{
+    opacity: 0.7;
+}
+.done span{
+    text-decoration: line-through;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 130px;
+}
+.box{
+    width: 30px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .form ,.tasks {
+     width: 90%;
+    }
+  }
+@media only screen and (min-width:769px) and (max-width: 1024px) {
+    .form ,.tasks {
+     width: 70%;
+    }
+}
